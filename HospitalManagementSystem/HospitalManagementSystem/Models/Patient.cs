@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace HospitalManagementSystem
 {
@@ -20,7 +21,8 @@ namespace HospitalManagementSystem
         public string MedicalHistory { get; set; }
         public DateTime CreatedDate { get; set; }
 
-        // read only property to display full name
+        // read only property to display full name (not mapped to a database column)
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
         public string FullName
         {
             get { return FirstName + " " + LastName; }
