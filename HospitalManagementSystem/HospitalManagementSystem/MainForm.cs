@@ -78,5 +78,21 @@ namespace HospitalManagementSystem
             DashboardForm dashboardForm = new DashboardForm();
             dashboardForm.Show();
         }
+
+        // opens inventory form built by person 3
+        private void button_inventory_Click(object sender, EventArgs e)
+        {
+            if (!IsLoggedIn()) return;
+            InventoryForm inventoryForm = new InventoryForm();
+            inventoryForm.Show();
+        }
+
+        // opens chat form built by person 3
+        private void button_chat_Click(object sender, EventArgs e)
+        {
+            if (!IsLoggedIn()) return;
+            ChatForm chatForm = new ChatForm();
+            chatForm.Show();
+        }
     }
 }
